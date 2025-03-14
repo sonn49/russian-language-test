@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест на уровень русского языка</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="test-container">
+            <div id="welcome-screen">
+                <h1>Проверьте свой уровень русского языка</h1>
+                <p>Этот тест поможет определить ваш уровень владения русским языком от A1 до C2.</p>
+                <p>Тест состоит из 20 вопросов и займет примерно 10-15 минут.</p>
+                <button id="start-btn" class="btn">Начать тест</button>
+            </div>
+            
+            <div id="question-screen" style="display: none;">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <div id="question-counter">Вопрос 1 из 20</div>
+                </div>
+                <div id="question-container">
+                    <h2 id="question-text"></h2>
+                    <div id="answer-buttons" class="btn-grid"></div>
+                </div>
+                <button id="next-btn" class="btn" disabled>Далее</button>
+            </div>
+            
+            <div id="results-screen" style="display: none;">
+                <h1>Ваш результат</h1>
+                <div class="result-level">
+                    <div id="level-icon"></div>
+                    <h2 id="level-text"></h2>
+                </div>
+                
+                <div class="level-scale-container">
+                    <h3>Шкала уровней владения языком</h3>
+                    <div class="level-scale">
+                        <div class="level-item" data-level="A1">A1</div>
+                        <div class="level-item" data-level="A2">A2</div>
+                        <div class="level-item" data-level="B1">B1</div>
+                        <div class="level-item" data-level="B2">B2</div>
+                        <div class="level-item" data-level="C1">C1</div>
+                        <div class="level-item" data-level="C2">C2</div>
+                    </div>
+                    <div class="level-labels">
+                        <span>Начальный</span>
+                        <span>Продвинутый</span>
+                    </div>
+                </div>
+                
+                <div id="level-description"></div>
+                <div id="correct-answers-count"></div>
+                
+                <div id="wrong-answers-container" class="wrong-answers-container">
+                    <h3>Вопросы с неправильными ответами:</h3>
+                    <div id="wrong-answers-list"></div>
+                </div>
+                
+                <button id="restart-btn" class="btn">Пройти еще раз</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
